@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    </head>
+    <style>
+      :root {
+        --white: #ffffff;
+        --black: #000000;
+        --very-light-pink: #c7c7c7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #acd9b2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        margin: 0; /* quita las margenes de body */
+        font-family: "Quicksand", sans-serif; 
+      }
+      .login {
+        width: 100%; /* lo hacemos para centrar nuestro contenido */
+        height: 100vh; /* igual */
+        display: grid;
+        place-items: center; /* centra nuestros elementos */
+      }
+      .form-container {
+        display: grid; /* vamos a crear nuestras filas para el contenido*/
+        grid-template-rows: auto 1fr auto;
+        width: 300px;
+      }
+      .logo {
+        width: 150px;
+        margin-bottom: 45px; /* nos da margen en la parte de abajo */
+        justify-self: center;
+        display: none; /* centra el logo */
+      }
+      .title {
+        font-size: var(--lg);
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .subtitle {
+        color: var(--very-light-pink);
+        font-size: var(--md);
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+      .form {
+        display: flex;
+        flex-direction: column; /* crea filas, y la ponemos en columnas con flex direction */
+      }
+      .label {
+        font-size: var(--sm);
+        font-weight: bold; /* añade grosor */
+        margin-bottom: 4px;
+      }
+      .input {
+        background-color: var(--text-input-field);
+        border: none;
+        border-radius: 8px;
+        height: 30px;
+        font-size: var(--md);
+        padding: 6px;
+        margin-bottom: 12px; /* le damos margen abajo de las casillas para separarlas */
+      }
+      .primary-button {
+        background-color: var(--hospital-green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        cursor: pointer; /* al pasar el cursor sale una mano */
+        font-size: var(--md);
+        font-weight: bold; /* lo ponemos mas grueso */
+        height: 50px;
+      }
+      .login-button {
+        margin-top: 14px;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 640px) {
+        .logo {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login"> 
+      <div class="form-container">
+        <img
+          src="/proyectoyard/logos/logo_yard_sale.svg"
+          alt="logo"
+          class="logo"
+        />
+
+        <h1 class="title">Create a new password</h1>
+        <p class="subtitle">Enter a new password for your new account</p>
+
+        <form action="/" class="form">
+          <label for="password" class="label">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="*********"
+            class="input input-password"
+          />
+
+          <label for="new-password" class="label">Password</label>
+          <input
+            type="password"
+            id="new-password"
+            placeholder="*********"
+            class="input input-password"
+          />
+
+          <input
+            type="submit"
+            value="Confirm"
+            class="primary-button login-button"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
