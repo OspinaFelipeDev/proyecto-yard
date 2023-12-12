@@ -156,6 +156,7 @@ nav {
 /* Menu en mobile */
 
 .mobile-menu {
+    background-color: var(--white);
     padding: 24px;
     top: 60px;
     position: absolute;
@@ -197,29 +198,129 @@ nav {
     color: var(--hospital-green) !important;
 }
 
+/* Aside (product detail y carrito) */
 
-/* Media */
-
-@media (max-width: 640px) {
-    .menu {
-        display: block;
-    }
-
-    .navbar-left ul {
-        display: none;
-    }
-
-    .navbar-email {
-        display: none;
-    }
-
-    .desktop-menu {
-        display: none;
-    }
+.product-detail {
+    background-color: var(--white);
+    width: 360px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
 }
 
-@media (min-width: 641px) {
-.mobile-menu {
-    display: none;
+.title-container {
+    display: flex;
 }
+
+.title-container img {
+    transform: rotate(180deg);
+    margin-right: 14px;
 }
+
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+    /*arriba y abajo nada, 24 pixeles a los lados */
+}
+
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.order p span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+}
+
+.shoping-cart {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    /* da espacio entre columnas*/
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.shoping-cart figure {
+    margin: 0;
+    /* quitamos el margen de la imagen*/
+}
+
+.shoping-cart figure img {
+    width: 70px;
+    /* esto afenta a la imagen de la bici */
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.shoping-cart p:nth-child(2) {
+    color: var(--very-light-pink);
+}
+
+.shoping-cart p:nth-child(3) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    /*damos estilo al boton*/
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
+
+
+    /* Media */
+
+    @media (max-width: 640px) {
+        .menu {
+            display: block;
+        }
+
+        .navbar-left ul {
+            display: none;
+        }
+
+        .navbar-email {
+            display: none;
+        }
+
+        .desktop-menu {
+            display: none;
+        }
+        .product-detail {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 641px) {
+        .mobile-menu {
+            display: none;
+        }
+    }
