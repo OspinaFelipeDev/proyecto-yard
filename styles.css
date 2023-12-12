@@ -1,3 +1,5 @@
+/* general */
+
 :root {
     --white: #ffffff;
     --black: #000000;
@@ -18,6 +20,8 @@ body {
 .inactive {
     display: none;
 }
+
+/* navbar (general) */
 
 nav {
     display: flex;
@@ -101,6 +105,8 @@ nav {
     align-items: center;
 }
 
+/* desktop-menu */
+
 .desktop-menu {
     position: absolute;
     top: 60px;
@@ -147,6 +153,53 @@ nav {
     /*   a los elementos inline no se les puede aplicar margin, entonces con display inline-block lo hacemos */
 }
 
+/* Menu en mobile */
+
+.mobile-menu {
+    padding: 24px;
+    top: 60px;
+    position: absolute;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    /*  grosor de la letra */
+}
+
+.mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+}
+
+.mobile-menu ul:nth-child(1) {
+    /* se refiere al primer ul de la lista */
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.mobile-menu ul li {
+    margin-bottom: 24px;
+}
+
+.mobile-menu ul:nth-child(3) {
+    margin-top: 100px;
+}
+
+.email {
+    font-size: var(--sm);
+    font-weight: 300 !important;
+}
+
+.sing-out {
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+}
+
+
+/* Media */
+
 @media (max-width: 640px) {
     .menu {
         display: block;
@@ -159,4 +212,14 @@ nav {
     .navbar-email {
         display: none;
     }
+
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 641px) {
+.mobile-menu {
+    display: none;
+}
 }
